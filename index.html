@@ -181,9 +181,51 @@
 
 <div class="post">
 
-    <a href="/2020/11/26/hello-world/">
+    <a href="/2020/12/03/CentOS7单用户模式重置密码方法/">
         <h2>
-            Hello World
+            CentOS7单用户模式重置密码方法
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/3
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h1 id="CentOS单用户重置密码"><a href="#CentOS单用户重置密码" class="headerlink" title="CentOS单用户重置密码"></a>CentOS单用户重置密码</h1><h2 id="0x00-使用场景"><a href="#0x00-使用场景" class="headerlink" title="0x00 使用场景"></a>0x00 使用场景</h2><p>如拿到一个CentOS机器不知道密码，或者常遇到ova模板部署的虚拟机没给密码，那么可以尝试这个方法。</p>
+<h2 id="0x01-操作步骤"><a href="#0x01-操作步骤" class="headerlink" title="0x01 操作步骤"></a>0x01 操作步骤</h2><p>1、重启在grub boot选择界面按“e”进入启动选项编辑界面。<br>2、在Linux16那行结尾加上 init=/bin/sh<br>3、ctrl + x 进入单用户模式<br>4、输入 mount -o remount,rw /<br>5、此时可以passwd修改root密码了（八位密码）<br>6、最后一步很重要不能漏，touch /.autorelabel<br>7、exec /sbin/init  就能继续引导进入正常系统，此时密码已经修改。</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2020/12/03/CentOS7单用户模式重置密码方法/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2020/11/26/hello/">
+        <h2>
+            hello
         </h2>
     </a>
 
@@ -204,20 +246,7 @@
         <div class="content" v-pre>
             
             
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+            
             
         </div>
     </div>
@@ -227,7 +256,7 @@
         
     </div>
 
-    <a href="/2020/11/26/hello-world/ " class="go-post">
+    <a href="/2020/11/26/hello/ " class="go-post">
         阅读全文
     </a>
 </div>

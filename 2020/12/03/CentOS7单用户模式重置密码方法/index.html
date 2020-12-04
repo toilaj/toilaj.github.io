@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summer || 个人主页</title>
+    <title>Summer || CentOS7单用户模式重置密码方法</title>
     <meta name="author" content="夏 ">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -149,42 +149,32 @@
                 </div>
 
                 <div id="main">
-                    <div id="archives">
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2020/12/3" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2020/12/3</div>
-                <a href="/2020/12/03/CentOS7单用户模式重置密码方法/">
-                    <h3>CentOS7单用户模式重置密码方法</h3>
-                </a>
-                <div class="info">
-                    
+                    <link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>CentOS7单用户模式重置密码方法 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/3
+        </span>
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2020/11/27" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2020/11/27</div>
-                <a href="/2020/11/26/hello/">
-                    <h3>hello</h3>
-                </a>
-                <div class="info">
-                    
+        
 
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <h1 id="CentOS单用户重置密码"><a href="#CentOS单用户重置密码" class="headerlink" title="CentOS单用户重置密码"></a>CentOS单用户重置密码</h1><h2 id="0x00-使用场景"><a href="#0x00-使用场景" class="headerlink" title="0x00 使用场景"></a>0x00 使用场景</h2><p>如拿到一个CentOS机器不知道密码，或者常遇到ova模板部署的虚拟机没给密码，那么可以尝试这个方法。</p>
+<h2 id="0x01-操作步骤"><a href="#0x01-操作步骤" class="headerlink" title="0x01 操作步骤"></a>0x01 操作步骤</h2><p>1、重启在grub boot选择界面按“e”进入启动选项编辑界面。<br>2、在Linux16那行结尾加上 init=/bin/sh<br>3、ctrl + x 进入单用户模式<br>4、输入 mount -o remount,rw /<br>5、此时可以passwd修改root密码了（八位密码）<br>6、最后一步很重要不能漏，touch /.autorelabel<br>7、exec /sbin/init  就能继续引导进入正常系统，此时密码已经修改。</p>
+
+    </div>
+
     
 </div>
-
                     <footer id="footer">
     <div class="footer-wrap">
         <div>
